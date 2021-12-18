@@ -1,8 +1,6 @@
 package ru.skypro;
 
-public class Main {
-
-
+public class App1 {
     public static void main(String[] args) {
         String nameWarAndPeace = "Война и мир";
         String authorWarAndPeace = "Л.Н. Толстой";
@@ -28,16 +26,18 @@ public class Main {
         }
 
 
-        Author authorFirstAndLastName1 = new Author("Лев", "Толстой");
-
-        System.out.println("lev.firstNameAuthor = " + authorFirstAndLastName1.firstNameAuthor);
-        System.out.println("tolstoy.lastNameAuthor = " + authorFirstAndLastName1.lastNameAuthor);
-
-
-        Author authorFirstAndLastName2 = new Author("Федор","Достоевский");
-
-        System.out.println("fedor.firstNameAuthor = " + authorFirstAndLastName2.firstNameAuthor);
-        System.out.println("dostoevsky.lastNameAuthor = " + authorFirstAndLastName2.lastNameAuthor);
+        AuthorApp1 lev = new AuthorApp1();
+        lev.firstNameAuthor = "Лев";
+        System.out.println("lev.firstNameAuthor = " + lev.firstNameAuthor);
+        AuthorApp1 tolstoy = new AuthorApp1();
+        tolstoy.lastNameAuthor = "Толстой";
+        System.out.println("tolstoy.lastNameAuthor = " + tolstoy.lastNameAuthor);
+        AuthorApp1 fedor = new AuthorApp1();
+        fedor.firstNameAuthor = "Федор";
+        System.out.println("fedor.firstNameAuthor = " + fedor.firstNameAuthor);
+        AuthorApp1 dostoevsky = new AuthorApp1();
+        dostoevsky.lastNameAuthor = "Достоевский";
+        System.out.println("dostoevsky.lastNameAuthor = " + dostoevsky.lastNameAuthor);
 
 
     }
