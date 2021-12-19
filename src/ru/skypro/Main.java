@@ -3,6 +3,7 @@ package ru.skypro;
 public class Main {
 
 
+
     public static void main(String[] args) {
         String nameWarAndPeace = "Война и мир";
         String authorWarAndPeace = "Л.Н. Толстой";   //лишний параметр, не входящий в условие задачи
@@ -27,17 +28,31 @@ public class Main {
 
         }
 
+        Book warAndPeace = new Book("Война и мир", "Л.Н. Толстой", 1989);
+        System.out.println("warAndPeace.name = " + warAndPeace.getName());
+        System.out.println("warAndPeace.Author = " + warAndPeace.getAuthor());
+        System.out.println("warAndPeace.yearOfIssie = " + warAndPeace.getYearOfIssie());
+        warAndPeace.setYearOfIssie(1994);
+        System.out.println("warAndPeace.getYearOfIssie() = " + warAndPeace.getYearOfIssie());
+
+        Book idiot = new Book("Идиот", "Ф.М. Достоевский", 1990);
+        System.out.println("idiot.name = " + idiot.getName());
+        System.out.println("idiot.Author = " + idiot.getAuthor());
+        System.out.println("idiot.yearOfIssie = " + idiot.getYearOfIssie());
+        idiot.setYearOfIssie(1991);
+        System.out.println("idiot.getYearOfIssie() = " + idiot.getYearOfIssie());
+
 
         Author authorFirstAndLastName1 = new Author("Лев", "Толстой");
 
-        System.out.println("lev.firstNameAuthor = " + authorFirstAndLastName1.firstNameAuthor);
-        System.out.println("tolstoy.lastNameAuthor = " + authorFirstAndLastName1.lastNameAuthor);
+        System.out.println("lev.firstNameAuthor = " + authorFirstAndLastName1.getFirstNameAuthor());
+        System.out.println("tolstoy.lastNameAuthor = " + authorFirstAndLastName1.getLastNameAuthor());
 
 
         Author authorFirstAndLastName2 = new Author("Федор","Достоевский");
 
-        System.out.println("fedor.firstNameAuthor = " + authorFirstAndLastName2.firstNameAuthor);
-        System.out.println("dostoevsky.lastNameAuthor = " + authorFirstAndLastName2.lastNameAuthor);
+        System.out.println("fedor.firstNameAuthor = " + authorFirstAndLastName2.getFirstNameAuthor());
+        System.out.println("dostoevsky.lastNameAuthor = " + authorFirstAndLastName2.getLastNameAuthor());
 
 
     }
