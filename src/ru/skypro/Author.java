@@ -1,8 +1,8 @@
 package ru.skypro;
 
 public class Author {
-    private String firstNameAuthor;
-    private String lastNameAuthor;
+    private final String firstNameAuthor;
+    private final String lastNameAuthor;
 
     public Author(String firstNameAuthor, String lastNameAuthor) {
         this.firstNameAuthor = firstNameAuthor;
@@ -18,6 +18,11 @@ public class Author {
         return this.lastNameAuthor;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Author{" +
+                "firstNameAuthor='" + firstNameAuthor + '\'' +
+                ", lastNameAuthor='" + lastNameAuthor + '\'' +
+                '}';
+    }
 }

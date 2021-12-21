@@ -1,32 +1,38 @@
 package ru.skypro;
 
 public class Book {
-    private String name;
-    private String author;
+    private final Author author;
+    private final String name;
     private int yearOfIssie;
 
-    public Book(String name, String Author, int yearOfIssie) {
+    public Book(Author author, String name, int yearOfIssie) {
+        this.author = author;
         this.name = name;
-        this.author = Author;
         this.yearOfIssie = yearOfIssie;
     }
 
-    public String getName() {
-        return this.name;
+    public Author getAuthor() {
+        return author;
     }
 
-    public String getAuthor() {
-        return this.author;
+    public String getName() {
+        return name;
     }
 
     public int getYearOfIssie() {
-        return this.yearOfIssie;
+        return yearOfIssie;
     }
 
     public void setYearOfIssie(int yearOfIssie) {
         this.yearOfIssie = yearOfIssie;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author=" + author +
+                ", name='" + name + '\'' +
+                ", yearOfIssie=" + yearOfIssie +
+                '}';
+    }
 }
